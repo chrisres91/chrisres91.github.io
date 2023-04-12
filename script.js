@@ -2,11 +2,16 @@ var clownBtn = document.getElementById('clownBtn');
 var clownImg = document.getElementById('clownImg');
 
 clownBtn.addEventListener('mousedown', function() {
-  // Show clown image
-  clownImg.style.display = 'block';
+  // Generate random delay between 0 and 5 seconds (5000 milliseconds)
+  var delay = Math.floor(Math.random() * 5000);
 
-  // Hide clown image after 3 seconds
+  // Show clown image after the random delay
+  setTimeout(function() {
+    clownImg.style.display = 'block';
+  }, delay);
+
+  // Hide clown image after 3 seconds (3000 milliseconds)
   setTimeout(function() {
     clownImg.style.display = 'none';
-  }, 3000);
+  }, delay + 3000);
 });
