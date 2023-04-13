@@ -1,7 +1,9 @@
 var clownBtn = document.getElementById('clownBtn');
 var clownImg = document.getElementById('clownImg');
 var bar = document.getElementById('bar');
-var barContainer = document.querySelector('.bar-container');
+var barContainer = document.getElementById('barContainer');
+var title = document.getElementById('title');
+var subtitle = document.getElementById('subtitle');
 var holding = false;
 var barInterval;
 
@@ -32,6 +34,7 @@ clownBtn.addEventListener('mouseup', function() {
         clownImg.style.display = 'none';
         // Reset the bar
         bar.style.width = '0%';
+        // Show the bar
         barContainer.style.display = 'block';
     }
 });
@@ -43,6 +46,7 @@ clownBtn.addEventListener('mouseout', function() {
         clownImg.style.display = 'none';
         // Reset the bar
         bar.style.width = '0%';
+        // Show the bar
         barContainer.style.display = 'block';
     }
 });
